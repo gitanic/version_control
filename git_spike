@@ -1,0 +1,126 @@
+1. O que é?
+  * É um software
+  * Tipos de controle de versionamento (cliente/servidor & distribuido)
+  * Apoia o desenvolvimento de software
+  * Apoia auditoria de desenvolvimento
+
+2. Como apoia o desenvolvimento/auditoria?
+  Desenvolvimento:
+    * O que mudou?
+    * Quando mudou?
+    * Auxilia trabalho em equipe
+    * Auxilia acesso ao código
+
+  Auditoria
+    * Por que mudou?
+    * Quem fez a mudança?
+    * Controle de entregas de software
+
+3. Onde é usado?
+  * Wikis
+  * Processadores de texto (word, google docs)
+  * CMS (drupal, joomla)
+  * Projetos de software
+  * Documentação de software
+
+4. Como funciona?
+  Repositório
+    \<------ read/write ------> Programador 1
+     \<----- read/write ------> Programador 2
+      \<---- read/write ------> Programador 3
+
+5. Ferramentas
+  * Cliente / Servidor
+  	1986: Concurrent Versions System (CVS)
+  	2000: Apache Subversion (SVN)
+  * Distribuido
+  	2005: Git
+
+6. Conceitos
+  * Checkout / Clone
+  * Update
+  * Commit (Small Commits)
+  * Stash
+  * Branch
+  * Tag
+  * Trunk / Master
+
+7. O que é GIT?
+  * Criado por Linus Torvalds
+  * GIT = gíria para estúpido
+  * Independente da arquitetura cliente/servidor (distribuido)
+  * Revisões incrementais (todo commit é uma tag)
+  * Possui o auto-merge
+  * Permite desenvolvimento distribuido ou local
+  * Chave pública para autenticação
+
+8. Quem usa?
+  * GoNow Tecnologia
+  * Editora Abril
+  * Gnome
+  * Linux Kernel
+  * Android
+  * Ruby on Rails
+  * Github
+  * etc, etc, etc
+
+9. Criando repositório
+
+  $ mkdir meu-projeto
+  $ cd meu-projeto
+  $ git init
+  $ git commit -am "Iniciando repositório"
+
+10. Verificando status e log
+
+  $ git status
+  (alterar arquivo)
+  $ git status
+
+  $ git log
+
+11. Realizando commits/updates
+
+  * Commit e Push
+    $ git status
+    $ git add <file>
+    $ git commit -m "Alterei o arquivo x"
+    $ git push
+
+  * Update / Merge
+    $ git pull
+
+  * Stash (Small commits)
+    (alterar arquivo)
+    $ git status
+    $ git stash
+    $ git stash list
+
+    $ git status
+    (alterar outro arquivo ** mais importante **)
+    $ git commit -am "Alterei o arquivo x"
+    $ git push
+
+    (voltar ao trabalho)
+    $ git stash list
+    $ git stash pop
+
+13. Branchs
+
+  $ git branch nova-feature
+  (alterar arquivo)
+  $ git commit -am "Criando feature x"
+  $ git checkout master
+  $ git merge nova-feature
+
+
+14. Tags
+
+  $ git tag 1.0.0
+  $ git push --tags
+
+Referências
+
+ http://www.git-scm.com/
+ http://en.wikipedia.org/wiki/Git_(software)
+ 
