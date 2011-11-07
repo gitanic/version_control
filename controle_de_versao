@@ -28,7 +28,6 @@
     \<------ read/write ------> Programador 1
      \<----- read/write ------> Programador 2
       \<---- read/write ------> Programador 3
-      \<---- read/write ------> Programador 3
 
 5. Ferramentas
   * Cliente / Servidor
